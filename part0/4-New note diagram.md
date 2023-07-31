@@ -1,4 +1,4 @@
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10.4.0/dist/mermaid.min.js"></script>
+// 4-New note diagram.md
 
 ```mermaid
 
