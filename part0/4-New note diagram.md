@@ -1,5 +1,7 @@
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10.4.0/dist/mermaid.min.js"></script>
 
+```mermaid
+
 sequenceDiagram
     participant User
     participant WebApp
@@ -11,3 +13,4 @@ sequenceDiagram
     WebApp->>Database: Save new note
     Database-->>WebApp: Confirmation
     WebApp-->>User: Display success message
+```
