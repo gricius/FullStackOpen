@@ -1,4 +1,5 @@
 <h1>6-New-note-in-Single-page-app-diagram.md</h1>
+<p>A diagram depicting the situation where the user creates a new note using the single-page version of the app at https://studies.cs.helsinki.fi/exampleapp/spa.</p>
 
 ```mermaid
 sequenceDiagram
