@@ -9,7 +9,7 @@ Note that your application needs to work only during a single browser session. O
 
 It is advisable to use the same structure that is used in the material and previous exercise. File index.js is as follows:
 
-```python
+```JavaScript
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(<App />)
 
 You can use the code below as a starting point for the App.js file:
 
-```python
+```JavaScript
 import { useState } from 'react'
 
 const App = () => {
@@ -52,7 +52,7 @@ Refactor your application so that displaying the statistics is extracted into it
 
 Remember that components should not be defined inside other components:
 
-```python
+```JavaScript
 // a proper place to define a component
 const Statistics = (props) => {
   // ...
@@ -80,4 +80,26 @@ Change your application to display statistics only once feedback has been gather
 
 
 <img src="https://fullstackopen.com/static/b453d7533ae85dcaf3eccf342a353c58/5a190/15e.png">
+
+# 1.10: unicafe step5
+Let's continue refactoring the application. Extract the following two components:
+
+- Button for defining the buttons used for submitting feedback
+- StatisticLine for displaying a single statistic, e.g. the average score.
+
+To be clear: the StatisticLine component always displays a single statistic, meaning that the application uses multiple components for rendering all of the statistics:
+```JavaScript
+const Statistics = (props) => {
+  /// ...
+  return(
+    <div>
+      <StatisticLine text="good" value ={...} />
+      <StatisticLine text="neutral" value ={...} />
+      <StatisticLine text="bad" value ={...} />
+      // ...
+    </div>
+  )
+}
+```
+The application's state should still be kept in the root App component.
 
