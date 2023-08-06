@@ -1,7 +1,11 @@
 import { useState } from 'react'
 
 const Statistics = (props) => {
-  return (
+  if (props.good === 0 && props.neutral === 0 && props.bad === 0) {
+    //
+    console.log("no feedback yet..")
+  } else {
+    return (
     <div>
       <h1>Statistics</h1>
       <p>good {props.good}</p>
@@ -12,6 +16,7 @@ const Statistics = (props) => {
       <p>positive {props.good / (props.good + props.neutral + props.bad) * 100} %</p>
     </div>
   )
+}
 }
 
 
