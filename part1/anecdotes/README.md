@@ -34,3 +34,16 @@ Find out how to generate random numbers in JavaScript, eg. via a search engine o
 
 Your finished application could look something like this:
 <img src="https://fullstackopen.com/static/8577fa00fc4d946e2322de9b2707c89c/5a190/18a.png">
+
+# 1.13*: anecdotes step2
+
+Expand your application so that you can vote for the displayed anecdote.
+<img src="https://fullstackopen.com/static/06f95cb43a18bd6429174200a8d17cff/5a190/19a.png">
+NB store the votes of each anecdote into an array or object in the component's state. Remember that the correct way of updating state stored in complex data structures like objects and arrays is to make a copy of the state.
+
+# 1.14*: anecdotes step3
+Now implement the final version of the application that displays the anecdote with the largest number of votes:
+
+<img src="https://fullstackopen.com/static/3e8638efbbbbcabac7bb79466ab3a5f6/5a190/20a.png">
+
+If multiple anecdotes are tied for first place it is sufficient to just show one of them.
