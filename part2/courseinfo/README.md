@@ -63,3 +63,63 @@ Show also the sum of the exercises of the course.
 
 If you haven't done so already, calculate the sum of exercises with the array method reduce.
 
+# 2.4: Course information step9
+Let's extend our application to allow for an arbitrary number of courses:
+```jsx
+const App = () => {
+  const courses = [
+    {
+      name: 'Half Stack application development',
+      id: 1,
+      parts: [
+        {
+          name: 'Fundamentals of React',
+          exercises: 10,
+          id: 1
+        },
+        {
+          name: 'Using props to pass data',
+          exercises: 7,
+          id: 2
+        },
+        {
+          name: 'State of a component',
+          exercises: 14,
+          id: 3
+        },
+        {
+          name: 'Redux',
+          exercises: 11,
+          id: 4
+        }
+      ]
+    }, 
+    {
+      name: 'Node.js',
+      id: 2,
+      parts: [
+        {
+          name: 'Routing',
+          exercises: 3,
+          id: 1
+        },
+        {
+          name: 'Middlewares',
+          exercises: 7,
+          id: 2
+        }
+      ]
+    }
+  ]
+
+  return (
+    <div>
+      // ...
+    </div>
+  )
+}
+```
+The application can, for example, look like this:
+<img src="https://fullstackopen.com/static/8c1ce3363ec056cd15c5edacbeec3370/5a190/10e.png">
+
+
