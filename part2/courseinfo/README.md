@@ -122,4 +122,6 @@ const App = () => {
 The application can, for example, look like this:
 <img src="https://fullstackopen.com/static/8c1ce3363ec056cd15c5edacbeec3370/5a190/10e.png">
 
+# 2.5: separate module
+Declare the Course component as a separate module, which is imported by the App component. You can include all subcomponents of the course in the same module.
 
