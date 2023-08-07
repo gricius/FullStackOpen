@@ -53,5 +53,13 @@ The application must work regardless of the number of parts a course has, so mak
 
 Ensure that the console shows no errors!
 
+# 2.2: Course information step7
 
+Show also the sum of the exercises of the course.
+
+<img src="https://fullstackopen.com/static/2d8aa950189db6cf2eeb794181429ae9/5a190/9e.png">
+
+# 2.3*: Course information step8
+
+If you haven't done so already, calculate the sum of exercises with the array method reduce.
 
