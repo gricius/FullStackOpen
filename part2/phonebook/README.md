@@ -34,3 +34,24 @@ const App = () => {
 
 export default App
 ```
+# 2.7: The Phonebook Step2
+
+Prevent the user from being able to add names that already exist in the phonebook. JavaScript arrays have numerous suitable methods for accomplishing this task. Keep in mind how object equality works in Javascript.
+
+Issue a warning with the alert command when such an action is attempted:
+<img src='https://fullstackopen.com/static/d5be58590c1460090cb1c87adf201886/5a190/11e.png'>
+
+
+# 2.8: The Phonebook Step3
+Expand your application by allowing users to add phone numbers to the phone book. You will need to add a second input element to the form (along with its own event handler):
+```jsx
+<form>
+  <div>name: <input /></div>
+  <div>number: <input /></div>
+  <div><button type="submit">add</button></div>
+</form>
+```
+At this point, the application could look something like this. The image also displays the application's state with the help of React developer tools:
+
+<img src="https://fullstackopen.com/static/3068a34af61692773a06d60ee93638a9/5a190/12e.png'>
+
