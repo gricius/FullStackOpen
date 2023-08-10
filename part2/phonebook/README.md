@@ -55,3 +55,11 @@ At this point, the application could look something like this. The image also di
 
 <img src="https://fullstackopen.com/static/3068a34af61692773a06d60ee93638a9/5a190/12e.png'>
 
+2.9*: The Phonebook Step4
+Implement a search field that can be used to filter the list of people by name:
+
+<img src="https://fullstackopen.com/static/4b5897029d4c9e2eb61631ca4c1a4f24/5a190/13e.png:>
+
+You can implement the search field as an input element that is placed outside the HTML form. The filtering logic shown in the image is case insensitive, meaning that the search term arto also returns results that contain Arto with an uppercase A.
+
+
