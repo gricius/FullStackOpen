@@ -135,3 +135,6 @@ Error: listen EADDRINUSE 0.0.0.0:3001
 it means that port 3001 is already in use by another application, e.g. in use by an already running json-server. Close the other application, or change the port in case that doesn't work.
 
 Modify the application such that the initial state of the data is fetched from the server using the axios-library. Complete the fetching with an Effect hook.
+# 2.12: The Phonebook step7
+Let's return to our phonebook application.
+Currently, the numbers that are added to the phonebook are not saved to a backend server. Fix this situation.

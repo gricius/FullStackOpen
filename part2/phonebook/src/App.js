@@ -12,13 +12,12 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    axios
-    .get('http://localhost:3001/persons')
-    .then((response) => {
+    axios.get('http://localhost:3001/persons').then((response) => {
       console.log(response.data);
       setPersons(response.data);
     });
   }, []);
+
 
   const addName = (event) => {
     event.preventDefault();
@@ -33,13 +32,18 @@ const App = () => {
 
     const nameObject = {
       name: newName,
-      number: newNumber,
-      id: persons.length + 1,
+      number: newNumber
     };
 
-    setPersons(persons.concat(nameObject));
-    setNewName('');
-    setNewNumber('');
+    axios
+      .post('http://localhost:3001/persons', nameObject)
+      .then((response) => {
+        console.log(response);
+        setPersons(persons.concat(response.data));
+        setNewName('');
+        setNewNumber('');
+      });
+    ;
   };
 
   const handleNameChange = (event) => {
