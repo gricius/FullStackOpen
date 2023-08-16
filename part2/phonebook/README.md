@@ -138,3 +138,5 @@ Modify the application such that the initial state of the data is fetched from t
 # 2.12: The Phonebook step7
 Let's return to our phonebook application.
 Currently, the numbers that are added to the phonebook are not saved to a backend server. Fix this situation.
+# 2.13: The Phonebook step8
+Extract the code that handles the communication with the backend into its own module by following the example shown earlier in this part of the course material.
