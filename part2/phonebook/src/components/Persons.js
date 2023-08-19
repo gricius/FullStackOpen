@@ -1,4 +1,5 @@
-
+// Person.js
+import React from "react";
 import personsService from "../services/persons";
 
 const Persons = ({persons, setPersons}) => {

@@ -1,3 +1,4 @@
+// App.js
 import {useState, useEffect} from 'react';
 import Filter from './components/Filter';
 import PersonForm from './components/PersonForm';
@@ -82,7 +83,7 @@ const App = () => {
       />
 
       <h2>Numbers</h2>
-      <Persons persons={filteredPersons} />
+      <Persons persons={filteredPersons} setPersons={setPersons} />
     </div>
   );
 };
