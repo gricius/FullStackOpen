@@ -146,3 +146,8 @@ Make it possible for users to delete entries from the phonebook. The deletion ca
 The associated resource for a person in the backend can be deleted by making an HTTP DELETE request to the resource's URL. If we are deleting e.g. a person who has the id 2, we would have to make an HTTP DELETE request to the URL localhost:3001/persons/2. No data is sent with the request.
 
 You can make an HTTP DELETE request with the axios library in the same way that we make all of the other requests.
+# 2.15*: The Phonebook step10
+Change the functionality so that if a number is added to an already existing user, the new number will replace the old number. It's recommended to use the HTTP PUT method for updating the phone number.
+
+If the person's information is already in the phonebook, the application can ask the user to confirm the action:
+<img src='https://fullstackopen.com/static/7353398520426bd823cf92202767653f/5a190/16e.png'>
