@@ -22,12 +22,13 @@ const App = () => {
       });
   }, []);
 
-  const showNotification = (message) => {
-    setNotification(message);
+  const showNotification = (message, type) => {
+    setNotification({message, type});
     setTimeout(() => {
       setNotification(null);
     }, 5000); // Display the notification for 5 seconds
   };
+
 
 
   const addName = (event) => {
@@ -43,7 +44,7 @@ const App = () => {
             setPersons(persons.map((person) => person.id !== existingPerson.id ? person : returnedPerson));
             setNewName('');
             setNewNumber('');
-            showNotification(`Updated number ${newNumber} for ${newName}`);
+            showNotification(`Updated number ${newNumber} for ${newName}`, 'success');
           });
 
       }
@@ -68,9 +69,13 @@ const App = () => {
         setNewName('');
         setNewNumber('');
         setNewNumber('');
-        showNotification(`Added ${newName}`);
-      }
-      );
+        showNotification(`Added ${newName}`, 'success');
+      })
+      .catch((error) => {
+        showNotification(`Failed to add ${newName}`, 'error'); // Error message
+        // Revert the optimistic update
+        setPersons(persons.filter((person) => person.name !== newName));
+      });
   };
 
 
@@ -95,7 +100,7 @@ const App = () => {
   return (
     <div>
       <h2>Phonebook</h2>
-      {notification && <Notification message={notification} />}
+      {notification && <Notification notification={notification} />}
       <Filter searchTerm={searchTerm} onSearchChange={handleSearchChange} />
 
       <h3>Add a new</h3>
