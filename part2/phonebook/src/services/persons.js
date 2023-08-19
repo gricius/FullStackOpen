@@ -21,7 +21,10 @@ const deletePerson = async (id) => {
 
 const update = (id, updatedPerson) => {
     const request = axios.put(`${baseUrl}/${id}`, updatedPerson);
-    return request.then(response => response.data);
+    return request.then(response => {
+        const updatedPerson = response.data;
+        return updatedPerson;
+    });
 };
 
 

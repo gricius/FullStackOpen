@@ -151,3 +151,7 @@ Change the functionality so that if a number is added to an already existing use
 
 If the person's information is already in the phonebook, the application can ask the user to confirm the action:
 <img src='https://fullstackopen.com/static/7353398520426bd823cf92202767653f/5a190/16e.png'>
+
+# 2.16: Phonebook step11
+Use the improved error message example from part 2 as a guide to show a notification that lasts for a few seconds after a successful operation is executed (a person is added or a number is changed):
+<img src='https://fullstackopen.com/static/da9af454f06489ca6e7453150beda738/5a190/27e.png'>
