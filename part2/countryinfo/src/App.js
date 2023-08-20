@@ -9,6 +9,7 @@ const App = () => {
 
   useEffect(() => {
     if (searchQuery) {
+      console.log(searchQuery)
       fetch(`https://restcountries.com/v3.1/name/${searchQuery}`)
         .then(response => response.json())
         .then(data => {
@@ -39,7 +40,8 @@ const App = () => {
 
   const handleCountrySelect = country => {
     setSelectedCountry(country);
-  };
+    console.log('selected country', country)
+    };
 
   return (
     <div>
