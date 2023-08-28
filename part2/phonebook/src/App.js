@@ -72,8 +72,11 @@ const App = () => {
         showNotification(`Added ${newName}`, 'success');
       })
       .catch((error) => {
-        showNotification(error.response.data.error, 'error');
-        console.log(error.response.data.error);
+        if (error.response && error.response.status === 400) {
+          showNotification(error.response.data.error, 'error');
+        } else {
+          showNotification(`Failed to add ${newName}`, 'error');
+        }
         setPersons(persons.filter((person) => person.name !== newName));
       });
   };
