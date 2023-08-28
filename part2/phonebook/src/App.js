@@ -72,8 +72,8 @@ const App = () => {
         showNotification(`Added ${newName}`, 'success');
       })
       .catch((error) => {
-        showNotification(`Failed to add ${newName}`, 'error'); // Error message
-        // Revert the optimistic update
+        showNotification(error.response.data.error, 'error');
+        console.log(error.response.data.error);
         setPersons(persons.filter((person) => person.name !== newName));
       });
   };
